@@ -1,0 +1,17 @@
+# Unix Executables #
+####################
+33sh
+33noprompt
+
+# Testing #
+###################
+shell_1_tests
+shell_2_tests
+cs0330_shell_1_test
+cs0330_shell_2_test
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
