@@ -508,7 +508,7 @@ int main() {
 #ifdef PROMPT /* Print prompt */
         char cwd[PATH_MAX];
         getcwd(cwd, PATH_MAX);
-        if (printf("pslsh: %s$ ", cwd) < 0) {
+        if (printf("psh: %s$ ", cwd) < 0) {
             fprintf(stderr, "Error while printing prompt.");
             cleanup_job_list(job_list);
             exit(1);
