@@ -103,14 +103,15 @@ This function contains all the logic for the child process. If in child process,
 
 `reap_jobs()`
 
-This function handles "reaping" of the jobs list, ensuring that no zombie processes persist. Call `waitpid` on all jobs in job list, printing and updating job list as needed.
+This function handles "reaping", updating the jobs list to reflect any changes in state (exited, terminated, suspended, or resumed) and ensuring that no zombie processes persist. It calls `waitpid` on all jobs in job list, printing and updating job list as needed.
 
 `main()`:
 
-A do-while loop continues until `exit` is called or `read` receives EOF.
+A do-while loop continues until `exit` is called or `read` receives EOF (`CRTL-D`).
 
-Each iteration, the program prints the prompt (if applicable), resets the buffer, token, and argv arrays, then reads input from the user. The program calls`parse`, then checks for non-white-space input. If there is valid input, the program checks for built-in commands, and executes the appropriate system call if a built-in command is found. If no built-in commands are found, it will attempt to `fork` a new child process and `execv` the program whose path is specified by the first non-redirection token. Inside the child process, the program closes STDIN/STDOUT and opens files as needed for file redirection.
+At the start of each iteration, the program calls `reap_jobs` and prints the prompt (if applicable). It then resets the buffer and other global variables, and reads input from the user. The program then calls `parse` and checks for non-white-space input. If there is valid input, the program looks for built-in commands, then executes system calls, send signals, and/or updates the job list as needed. If no built-in commands are found, it will attempt to `fork` a new child process, calling `exec_child` to handle I/O redirection. If the process is running in the foreground, the program calls `handle_fg_process` on the child process. 
 
+All jobs are terminated upon receiving EOF.
   
  
 ### File Redirection
@@ -130,9 +131,6 @@ char* input_file;
 char* output_file;
 
 ```
-
-  
-  
 
   
   
