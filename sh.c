@@ -220,7 +220,7 @@ int parse(char buffer[BUFFER_SIZE], char *tokens[512], char *argv[512]) {
  * handle_fg_process()
  * - Description: Pass terminal control to child process, then call waitpid to
  * wait for the process to finish. Check status for terminating or suspending
- * signals, and take appropiate action.
+ * signals, and take appropriate action.
  * If command == NULL, this function is being called by "fg" command
  * subroutine. Update state of job if suspended, remove from job list if
  * terminated.
