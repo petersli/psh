@@ -92,17 +92,16 @@ This function extracts tokens from the buffer using strtok and parses file redir
 
 `handle_fg_process()`
 
-Pass terminal control to child process, then call waitpid to
-wait for the process to finish. Check status for terminating or suspending
+This function handles waiting, signalling, and reaping of foreground processes. Passes terminal control to child process, then calls waitpid to
+wait for the process to finish. Checks status for terminating or suspending
 signals, and take appropriate action.
 
  `exec_child()`
-
-If in child process, sets child pgid, restores signal handlers, and does file redirection. Calls execv. If in parent process, does nothing.
+This function contains all the logic for the child process. If in child process, sets child pgid, restores signal handlers, and does file redirection. Calls execv. If in parent process, does nothing.
 
 `reap_jobs()`
 
-Call `waitpid` on all jobs in job list, printing and updating job list as needed
+This function handles "reaping" of the jobs list, ensuring that no zombie processes persist. Call `waitpid` on all jobs in job list, printing and updating job list as needed.
 
 `main()`:
 
