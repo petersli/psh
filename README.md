@@ -164,5 +164,5 @@ Potential features for a new terminal
 
 ## Credits
 
-CS33's *Shell 1* and *Shell 2* assignments listed functionality specifications, but did not give starter code for the shell. 
-The course did, however, provide the `jobs list` data structure, via `jobs.c` and `jobs.h`.
+CS33's shell assignments did not provide starter code, but they did provide the functionality specifications that guided my initial engineering.
+The one exception is the `jobs list` data structure, which was given via `jobs.c` and `jobs.h`.
