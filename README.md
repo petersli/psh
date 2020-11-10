@@ -1,5 +1,10 @@
 # psh 🐚
 
+Hello! This is a shell written in C. 
+
+psh began its life as a project in Brown's Computer Systems (CS33) course, and the bottom of this README has some next steps outlined. Further features will be added as I conduct more user research and interviews on painpoints with current shells! 😁
+
+
 ## Features
 **Built-in Commands:**
 `cd`: change directory
@@ -26,6 +31,8 @@
 The shell can `fork` and `execv` new child processes based on command line input. To run a process in the background, append `&` to your command. To redirect input, use `<`. To redirect output, use `>` to overwrite the output file or `>>` to append to it,
 
 Examples:
+
+
  `psh: /bin/ls ` will print the directory contents
 
 
