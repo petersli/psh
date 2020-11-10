@@ -32,7 +32,7 @@ psh began its life as a project in Brown's Computer Systems (CS33) course, and t
 **Forking Child Processes, I/O Redirection, Background Processes:**
 
 
-The shell can `fork` and `execv` new child processes based on command line input. To run a process in the background, append `&` to your command. To redirect input, use `<`. To redirect output, use `>` to overwrite the output file or `>>` to append to it,
+The shell can `fork` and `execv` new child processes based on command line input. To run a process in the background, append `&` to your command. To redirect input, use `<`. To redirect output, use `>` to overwrite the output file or `>>` to append to it.
 
 Examples:
 
