@@ -7,6 +7,8 @@ psh began its life as a project in Brown's Computer Systems (CS33) course, and t
 
 ## Features
 **Built-in Commands:**
+
+
 `cd`: change directory
 
 
@@ -28,6 +30,8 @@ psh began its life as a project in Brown's Computer Systems (CS33) course, and t
 `jobs`: lists all current jobs and their job ID, state (running/suspended), and the command used to execute them
 
 **Forking Child Processes, I/O Redirection, Background Processes:**
+
+
 The shell can `fork` and `execv` new child processes based on command line input. To run a process in the background, append `&` to your command. To redirect input, use `<`. To redirect output, use `>` to overwrite the output file or `>>` to append to it,
 
 Examples:
@@ -42,6 +46,8 @@ Examples:
  `psh: /bin/echo hello > echoed.txt` will overwrite the contents of echoed.txt with "hello"
 
 **Signal Handling:**
+
+
 The shell responds to user signals as expected, only quitting when it reaches EOF (`CTRL-D`) or the user quits via `exit`. For instance, typing `CTRL-C` will terminate the shell's foreground child process via `SIGINT`.
 
 
@@ -146,5 +152,12 @@ Example prompt:
 
 ## Moving Forward (Features to Add)
 
+Shell features
 - Smart autocomplete and autocorrect
 - Make copy-paste in vim go to system clipboard, especially over ssh
+
+Potential features for a new terminal
+- Click to move cursor
+- Chat / real-time collaboration
+
+
