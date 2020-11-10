@@ -97,6 +97,8 @@ wait for the process to finish. Checks status for terminating or suspending
 signals, and take appropriate action.
 
  `exec_child()`
+ 
+
 This function contains all the logic for the child process. If in child process, sets child pgid, restores signal handlers, and does file redirection. Calls execv. If in parent process, does nothing.
 
 `reap_jobs()`
