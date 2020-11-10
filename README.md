@@ -164,4 +164,5 @@ Potential features for a new terminal
 
 ## Credits
 
-The implementation of the job list structure was provided by CS33 via `jobs.c` and `jobs.h`
+CS33's *Shell 1* and *Shell 2* assignments listed functionality specifications, but did not give starter code for the shell. 
+The course did, however, provide the `jobs list` data structure, via `jobs.c` and `jobs.h`.
