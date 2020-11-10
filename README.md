@@ -162,3 +162,6 @@ Potential features for a new terminal
 - Chat / real-time collaboration
 
 
+## Credits
+
+The implementation of the job list structure was provided by CS33 via `jobs.c` and `jobs.h`
