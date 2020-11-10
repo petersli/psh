@@ -3,11 +3,23 @@
 ## Features
 **Built-in Commands:**
 `cd`: change directory
+
+
 `ln`: create hard link
+
+
 `rm`: remove file
+
+
 `fg`: resume job if suspended, run in foreground
+
+
 `bg`: resume job if suspended, run in background
+
+
 `exit`: quit the shell
+
+
 `jobs`: lists all current jobs and their job ID, state (running/suspended), and the command used to execute them
 
 **Forking Child Processes, I/O Redirection, Background Processes:**
@@ -15,7 +27,11 @@ The shell can `fork` and `execv` new child processes based on command line input
 
 Examples:
  `psh: /bin/ls ` will print the directory contents
+
+
  `psh: sleep 40 &` will sleep for 40 seconds in the background
+
+
  `psh: /bin/echo hello > echoed.txt` will overwrite the contents of echoed.txt with "hello"
 
 **Signal Handling:**
