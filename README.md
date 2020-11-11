@@ -40,7 +40,7 @@ Examples:
  `psh: /bin/ls ` will print the directory contents
 
 
- `psh: sleep 40 &` will sleep for 40 seconds in the background
+ `psh: /bin/sleep 40 &` will sleep for 40 seconds in the background
 
 
  `psh: /bin/echo hello > echoed.txt` will overwrite the contents of echoed.txt with "hello"
@@ -137,14 +137,10 @@ char* output_file;
 
 ### Prompt
 
-When compiled with prompt, the prompt contains your current work directory,
+When compiled with prompt, the prompt contains your current work directory, useful for `cd` and other commands.
 
-making `cd` and other commands easier to use.
-
-  
 
 Example prompt:
-
   
 
 `psh: /vagrant/psh-src$`
